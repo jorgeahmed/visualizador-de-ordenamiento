@@ -39,29 +39,3 @@ Un proyecto web educativo e interactivo diseñado para ayudar a estudiantes y de
 ---
 
 ## 📂 Estructura del Proyecto
-
-```
-/visualizador-de-ordenamiento
-│
-├── 📄 index.html              (Página principal: Visualizador y Comparador)
-├── 🎨 style.css               (Hoja de estilos principal)
-├── 🧪 test_runner.html        (Página para ejecutar la suite de pruebas)
-├── 📜 README.md               (Este archivo de documentación)
-├── ⚖️ LICENSE                (Licencia del proyecto)
-├── .gitignore              (Archivos a ignorar por Git)
-│
-└── 📁 js/
-    │
-    ├── 🧠 main.js               (Lógica principal de la UI y el visualizador)
-    ├── 📚 descriptions.js      (Textos, estadísticas y código para mostrar)
-    ├── ✅ test_suite.js       (Lógica para la página de pruebas)
-    ├── 👷 comparator_worker.js   (Script del Web Worker para el comparador)
-    │
-    └── 📁 algorithms/
-        ├── ⚙️ algorithms_silent.js (Lógica pura de todos los algoritmos)
-        ├── ⏩ quicksort.js
-        ├── 🧩 mergesort.js
-        ├── ⛰️ heapsort.js
-        ├── ⏱️ timsort.js
-        └── 🔢 radixsort.js
-```
