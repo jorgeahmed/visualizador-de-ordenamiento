@@ -4,16 +4,15 @@
 
 Un proyecto web educativo e interactivo diseñado para ayudar a estudiantes y desarrolladores a entender cómo funcionan los algoritmos de ordenamiento de una manera visual y comparativa.
 
-**[Ver Demo en Vivo](https://TU-USUARIO.github.io/visualizador-de-ordenamiento/)**
-*(Nota: Reemplaza `TU-USUARIO` y `visualizador-de-ordenamiento` con tu nombre de usuario y el nombre de tu repositorio)*
+**[Ver Demo en Vivo](https://jorgeahmed.github.io/visualizador-de-ordenamiento/)**
+
 
 ---
 
-### Captura de Pantalla
+### Captura de Pantalla / Demo
 
-![Captura de Pantalla del Visualizador](image_7756aa.png)
-*(Recomendación: Sube una de tus capturas de pantalla al repositorio y enlaza aquí la imagen, o mejor aún, crea un GIF animado de la visualización)*
-
+![Demostración del Visualizador de Algoritmos](Demo 1.png)
+![Comprobador de velocidad](Demo.png)
 ---
 
 ## 🚀 Características Principales
