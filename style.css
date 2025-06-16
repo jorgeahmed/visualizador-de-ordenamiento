@@ -238,3 +238,49 @@ nav button.active, nav button:hover {
     word-break: break-all;
     font-family: 'Courier New', Courier, monospace;
 }
+#notification-bubble {
+    position: fixed;            /* Se queda fija en la pantalla aunque hagas scroll */
+    top: 80px;                  /* Distancia desde arriba */
+    right: 20px;                 /* Distancia desde la derecha */
+    background-color: #24292e;   /* Fondo oscuro */
+    color: white;               /* Texto blanco */
+    padding: 15px 20px;         /* Espaciado interno */
+    border-radius: 8px;         /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombra para que resalte */
+    max-width: 280px;           /* Ancho máximo */
+    z-index: 1000;              /* Se asegura de que esté por encima de otros elementos */
+    
+    /* Animación de entrada y salida */
+    opacity: 0;                 /* Empieza invisible */
+    transform: translateY(-20px); /* Empieza un poco más arriba */
+    pointer-events: none;       /* No se puede hacer clic en ella cuando está oculta */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Transición suave */
+}
+
+#notification-bubble.visible {
+    opacity: 1;                 /* Se hace visible */
+    transform: translateY(0);   /* Vuelve a su posición original */
+    pointer-events: auto;       /* Se puede interactuar con ella */
+}
+
+/* El triángulo que apunta hacia abajo */
+#notification-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;              /* Se posiciona justo debajo de la burbuja */
+    left: calc(50% - 10px);     /* Centrado horizontalmente */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #24292e; /* El color del triángulo es el mismo que el fondo */
+}
+
+#notification-bubble p {
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+#notification-bubble small {
+    opacity: 0.8;
+}

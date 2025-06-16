@@ -17,10 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const explanationDisplay = document.getElementById('explanation-display');
     const unsortedDisplay = document.getElementById('unsorted-array-display');
     const sortedDisplay = document.getElementById('sorted-array-display');
+    const notificationBubble = document.getElementById('notification-bubble');
+
+
 
     let array = [];
     let barElements = [];
     let isSorting = false;
+    let notificationTimeout; // NUEVO: Variable para controlar el temporizador
+
 
     // --- Lógica de Navegación ---
     btnVisualizer.addEventListener('click', () => {
@@ -109,7 +114,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isSorting) return;
         isSorting = true;
         startBtn.disabled = true;
-        
+        // Limpiamos cualquier temporizador anterior para evitar solapamientos
+        clearTimeout(notificationTimeout);
+        // Mostramos la burbuja añadiendo la clase 'visible'
+        notificationBubble.classList.add('visible');
+        // Creamos un temporizador para que se oculte sola después de 7 segundos
+        notificationTimeout = setTimeout(() => {
+            notificationBubble.classList.remove('visible');
+        }, 7000); // 7000 milisegundos = 7 segundos
+        // --- FIN DE LA LÓGICA DE LA BURBUJA ---
+
         const userInput = dataInput.value.trim();
         if(userInput) {
             array = userInput.split(/\s+/).map(Number).filter(n => !isNaN(n) && n > 0);
