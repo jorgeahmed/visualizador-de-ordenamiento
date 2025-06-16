@@ -11,7 +11,7 @@ Un proyecto web educativo e interactivo diseñado para ayudar a estudiantes y de
 
 ### Captura de Pantalla / Demo
 
-![Demostración del Visualizador de Algoritmos](assets/Demo 1.png)
+![Visualizador de Algoritmos](assets/Demo1.png)
 ![Comprobador de velocidad](assets/Demo.png)
 ---
 
