@@ -1,0 +1,240 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #24292e;
+    color: white;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #f6f8fa;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+nav button {
+    background-color: #fafbfc;
+    color: #24292e;
+    border: 1px solid #d1d5da;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 6px;
+    transition: background-color 0.2s, border-color 0.2s;
+    font-weight: 600;
+}
+
+nav button.active, nav button:hover {
+    background-color: #0366d6;
+    color: white;
+    border-color: #0366d6;
+}
+
+.controls {
+    padding: 1rem;
+    background-color: #fff;
+    margin: 1rem auto;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.controls label {
+    font-weight: 600;
+}
+
+.controls input[type="text"], .controls input[type="number"], .controls select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.controls button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#random-btn {
+    background-color: #6f42c1;
+}
+
+.bar {
+    display: inline-block;
+    background-color: #0366d6;
+    margin: 0 1px;
+    width: 10px;
+    transition: height 0.2s, background-color 0.2s, transform 0.2s;
+    transform-origin: bottom;
+}
+
+.bar-comparing { background-color: #ffc107; }
+.bar-swap { background-color: #d73a49; }
+.bar-pivot { background-color: #6f42c1; }
+.bar-sorted { background-color: #28a745; }
+
+.hidden {
+    display: none;
+}
+
+/* --- ESTILOS PARA LA NUEVA SECCIÓN DE INFORMACIÓN --- */
+#main-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 90%;
+    margin: 1rem auto;
+    align-items: stretch;
+}
+
+#canvas-container {
+    flex: 3;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#visual-canvas {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#code-container {
+    flex: 2;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#code-container h3, #explanation-container h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 0.5rem;
+}
+
+#code-container pre {
+    flex-grow: 1;
+    margin: 0;
+    overflow-y: auto;
+    background-color: #2d2d2d !important;
+    border-radius: 6px;
+    padding: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#explanation-container {
+    max-width: 90%;
+    margin: 1rem auto;
+    background-color: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+#explanation-display {
+    line-height: 1.6;
+}
+
+/* --- ESTILOS PARA LA TABLA DE COMPARACIÓN --- */
+#results-container {
+    max-width: 90%;
+    margin: 1rem auto;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#comparison-table th, #comparison-table td {
+    border: 1px solid #e1e4e8;
+    padding: 12px;
+    text-align: left;
+}
+
+#comparison-table thead {
+    background-color: #f6f8fa;
+    font-weight: 600;
+}
+
+#comparison-table tbody tr:nth-child(even) {
+    background-color: #f6f8fa;
+}
+
+#comparison-table .time {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* ... (todos tus estilos anteriores) ... */
+
+/* --- NUEVOS ESTILOS PARA LAS LISTAS DE NÚMEROS --- */
+#array-display-container {
+    display: flex;
+    gap: 1rem;
+    max-width: 90%;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+#array-display-container > div {
+    flex: 1;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e1e4e8;
+}
+
+#array-display-container h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+#array-display-container pre {
+    margin: 0;
+    padding: 0.5rem;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-family: 'Courier New', Courier, monospace;
+}

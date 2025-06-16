@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suite de Pruebas de Algoritmos</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f0f2f5; }
+        h1, h2 { text-align: center; }
+        p { text-align: center; }
+        #test-results-container { max-width: 800px; margin: 20px auto; }
+        .test-case { border: 1px solid #ccc; border-radius: 8px; padding: 15px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .pass { background-color: #d4edda; border-color: #c3e6cb;}
+        .fail { background-color: #f8d7da; border-color: #f5c6cb;}
+        .skipped { background-color: #fff3cd; border-color: #ffeeba;}
+        h3 { margin-top: 0; }
+        pre { background-color: #f0f0f0; padding: 10px; border-radius: 4px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>Resultados de la Suite de Pruebas</h1>
+    
+    <div id="test-results-container">
+        <h2>Pruebas Unitarias (Correctitud de Algoritmos)</h2>
+        <div id="unit-test-results"></div>
+
+        <hr style="margin: 40px 0;">
+
+        <h2>Pruebas de Integración (Funcionalidad de la App)</h2>
+        <div id="integration-test-results"></div>
+    </div>
+
+    <script src="js/algorithms/algorithms_silent.js"></script>
+    <script src="js/test_suite.js"></script>
+</body>
+</html>

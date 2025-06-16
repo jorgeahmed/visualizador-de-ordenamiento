@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Algoritmos de Ordenamiento</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Visualizador de Algoritmos de Ordenamiento</h1>
+        <p>Una herramienta para entender y comparar algoritmos de forma visual.</p>
+    </header>
+
+    <nav>
+        <button id="btn-visualizador" class="active">Visualizador Gráfico</button>
+        <button id="btn-comparador">Comparador de Velocidad</button>
+    </nav>
+
+    <main>
+        <section id="visualizer-section">
+            <div class="controls">
+                <label for="algorithm-select">Algoritmo:</label>
+                <select id="algorithm-select">
+                    <option value="quicksort">Quicksort</option>
+                    <option value="mergesort">Mergesort</option>
+                    <option value="heapsort">Heapsort</option>
+                    <option value="timsort">Timsort</option>
+                    <option value="radixsort">Radix Sort</option>
+                </select>
+                <label for="speed-slider">Velocidad:</label>
+                <input type="range" id="speed-slider" min="10" max="500" value="100">
+                <input type="text" id="data-input" placeholder="Ej: 8 3 10 1 6 (o dejar en blanco para aleatorio)">
+                <button id="start-btn">Ordenar</button>
+                <button id="random-btn">Generar Datos</button>
+            </div>
+            <div id="array-display-container">
+                <div>
+                    <h4>Lista Original:</h4>
+                    <pre id="unsorted-array-display"></pre>
+                </div>
+                <div>
+                    <h4>Lista Ordenada:</h4>
+                    <pre id="sorted-array-display"></pre>
+                </div>
+            </div>
+            <div id="main-content-container">
+                <div id="canvas-container">
+                    <div id="visual-canvas"></div>
+                </div>
+                <div id="code-container">
+                    <h3>Código en Ejecución</h3>
+                    <pre><code id="code-display" class="language-javascript">Selecciona un algoritmo y presiona "Ordenar".</code></pre>
+                </div>
+            </div>
+            <div id="explanation-container">
+                <h3>Explicación</h3>
+                <p id="explanation-display">Aquí aparecerá una explicación del bloque de código que se está ejecutando actualmente.</p>
+            </div>
+        </section>
+
+        <section id="comparator-section" class="hidden">
+            <div class="controls">
+                <label for="array-size">Tamaño:</label>
+                <input type="number" id="array-size" value="150000" min="100" max="500000" step="1000">
+                <label for="data-type">Tipo de Datos:</label>
+                <select id="data-type">
+                    <option value="random">Aleatorio</option>
+                    <option value="nearly-sorted">Casi Ordenado</option>
+                    <option value="reversed">Orden Inverso</option>
+                    <option value="few-unique">Pocos Valores Únicos</option>
+                </select>
+                <button id="compare-btn">Ejecutar Comparación</button>
+            </div>
+            <div id="results-container">
+                <h3>Tabla Comparativa</h3>
+                <p id="results-description">Resultados para una lista del tamaño y tipo especificado.</p>
+                <table id="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Algoritmo</th>
+                            <th>Tiempo Medido (ms)</th>
+                            <th>Complejidad Promedio</th>
+                            <th>Peor Caso</th>
+                            <th>Complejidad Espacial</th>
+                            <th>Estable</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comparison-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script src="js/descriptions.js"></script>
+    <script src="js/algorithms/quicksort.js"></script>
+    <script src="js/algorithms/mergesort.js"></script>
+    <script src="js/algorithms/heapsort.js"></script>
+    <script src="js/algorithms/timsort.js"></script>
+    <script src="js/algorithms/radixsort.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
